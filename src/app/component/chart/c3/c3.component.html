@@ -1,0 +1,57 @@
+@if (!c3Control) {
+<canvas baseChart [data]="scatterChartData" [options]="scatterChartOptions" [type]="scatterChartType">
+</canvas>
+}
+
+@if (c3Control) {
+<div class="w-screen flex justify-center items-center bg-gray-100 py-12">
+
+  <div class="relative w-full sm:w-4/5 lg:w-3/5 mx-auto sm:p-6 p-4 bg-white rounded-none sm:rounded-2xl shadow-lg">
+    <!-- Botón de Volver -->
+    <button (click)="navigateTo('')"
+      class="absolute top-4 left-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer flex items-center shadow-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="mr-2 fill-white">
+        <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+      </svg>
+      Volver
+    </button>
+
+    <!-- Título -->
+    <div class="flex justify-center text-center">
+      <h2 class="text-xl md:text-2xl font-bold text-gray-800 md:text-left mb-6">
+        Trayectorias de Asteroides Observadas
+      </h2>
+    </div>
+
+    <!-- Descripción General -->
+    <p class="text-gray-600 text-center mb-6">
+      La observación de las trayectorias de los asteroides es fundamental para comprender su evolución y prever posibles
+      impactos. Este gráfico de dispersión muestra la relación entre la velocidad y la distancia de varios asteroides
+      detectados en el último año.
+    </p>
+
+    <!-- Gráfico -->
+    <div class="flex justify-center">
+      <canvas baseChart [data]="scatterChartData" [options]="scatterChartOptions" [type]="scatterChartType"></canvas>
+    </div>
+
+    <!-- Explicación de los Datos -->
+    <div class="mt-6 p-4 bg-gray-100 rounded-xl">
+      <h3 class="text-lg font-semibold text-gray-700 mb-2">Explicación de los Datos</h3>
+      <p class="text-gray-600 mb-4">
+        El gráfico de dispersión muestra la velocidad de los asteroides en función de su distancia desde la Tierra. Cada
+        punto en el gráfico representa un asteroide observado, y su posición refleja su comportamiento orbital.
+      </p>
+
+      <!-- Datos Científicos -->
+      <ul class="text-gray-600 space-y-2">
+        <li><strong>Velocidad Promedio:</strong> 30 km/s</li>
+        <li><strong>Distancia Promedio de la Tierra:</strong> 3.2 millones de km</li>
+        <li><strong>Ángulo de Orbita Promedio:</strong> 45°</li>
+        <li><strong>Periodo Orbital Promedio:</strong> 5 años</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+}

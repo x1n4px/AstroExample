@@ -1,0 +1,77 @@
+<div class="w-screen flex justify-center items-center bg-gray-100 py-12">
+  <div
+    class="w-4/5 md:w-3/5 aspect-auto grid grid-cols-1 grid-rows-[auto_auto_auto] md:grid-cols-2 md:grid-rows-[auto_auto_auto] gap-4">
+
+    <!-- Primera fila: Ocupar todo el ancho -->
+    <div class="col-span-2 flex flex-col md:flex-row gap-4 w-full">
+      <div class="flex-1 p-4 border border-gray-300 rounded-2xl bg-white shadow-md relative flex w-full h-auto">
+        <button class="absolute top-4 left-4 w-6 h-6 rounded-full cursor-pointer" (click)="openComponent('c1')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1);">
+            <path d="M2 15h7v7h2v-9H2v2zM15 2h-2v9h9V9h-7V2z"></path>
+          </svg>
+        </button>
+        <div class="w-full h-auto overflow-hidden flex items-center justify-center ">
+          <app-c1 [c1Control]="c1Control" class="w-full h-full"></app-c1>
+        </div>
+      </div>
+
+      <div class="flex-1 p-4 border border-gray-300 rounded-2xl bg-white shadow-md relative flex w-full h-auto">
+        <button class="absolute top-4 left-4 w-6 h-6 rounded-full cursor-pointer" (click)="openComponent('c2')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1);">
+            <path d="M2 15h7v7h2v-9H2v2zM15 2h-2v9h9V9h-7V2z"></path>
+          </svg>
+        </button>
+        <div class="w-full h-full flex items-center justify-center">
+          <app-c2 [c2Control]="c2Control" class="w-full h-full"></app-c2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda fila -->
+    <div class="col-span-2 p-4 border border-gray-300 rounded-2xl bg-white shadow-md flex justify-center items-center">
+      <div class="flex-1 p-4 border border-gray-300 rounded-2xl bg-white shadow-md relative flex w-full h-auto">
+        <button class="absolute top-4 left-4 w-6 h-6 rounded-full cursor-pointer" (click)="openComponent('c3')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1);">
+            <path d="M2 15h7v7h2v-9H2v2zM15 2h-2v9h9V9h-7V2z"></path>
+          </svg>
+        </button>
+        <div class="w-full h-auto overflow-hidden flex items-center justify-center ">
+          <app-c3 [c3Control]="c3Control" class="w-full h-full"></app-c3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tercera fila -->
+    <div class="col-span-2 flex flex-col md:flex-row gap-4 w-full">
+      <div
+        class="flex-1 p-4 border border-gray-300 rounded-2xl bg-white shadow-md relative flex justify-center items-center">
+        <button class="absolute top-4 left-4 w-6 h-6 rounded-full cursor-pointer" (click)="openComponent('c1')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1);">
+            <path d="M2 15h7v7h2v-9H2v2zM15 2h-2v9h9V9h-7V2z"></path>
+          </svg>
+        </button>
+        <div class="w-full h-auto overflow-hidden flex items-center justify-center ">
+          <app-c1 [c1Control]="c1Control" class="w-full h-full"></app-c1>
+        </div>
+      </div>
+      <div
+        class="flex-1 p-4 border border-gray-300 rounded-2xl bg-white shadow-md relative flex justify-center items-center">
+        <button class="absolute top-4 left-4 w-6 h-6 rounded-full cursor-pointer" (click)="openComponent('c1')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1);">
+            <path d="M2 15h7v7h2v-9H2v2zM15 2h-2v9h9V9h-7V2z"></path>
+          </svg>
+        </button>
+        <div class="w-full h-auto overflow-hidden flex items-center justify-center ">
+          <app-c1 [c1Control]="c1Control" class="w-full h-full"></app-c1>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
